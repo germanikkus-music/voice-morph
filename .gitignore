@@ -1,0 +1,8 @@
+# Rebuilt by tools/build.py and tools/package.py
+build/
+dist/
+# Offline test renders
+listen/
+# Mock-up of the MPC screen made while designing the backdrop
+skin/preview.png
+.DS_Store

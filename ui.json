@@ -1,0 +1,27 @@
+{
+  "kit": "violet",
+  "pages": [
+    { "name": "VOICE",
+      "controls": [
+        { "param": "Style", "widget": "slider", "overlay": "menu" },
+        { "param": "Character", "widget": "knob" },
+        { "param": "Echo", "widget": "knob" },
+        { "param": "Low Cut", "widget": "knob" },
+
+        { "param": "Key", "widget": "slider", "overlay": "menu" },
+        { "param": "Sens", "widget": "knob" },
+        { "param": "Echo Time", "widget": "slider", "overlay": "menu" },
+        { "param": "Lows", "widget": "knob", "polarity": "bipolar" },
+
+        { "param": "Scale", "widget": "slider", "overlay": "menu" },
+        { "param": "Mix", "widget": "fader" },
+        { "param": "Stutter", "widget": "knob" },
+        { "param": "Highs", "widget": "knob", "polarity": "bipolar" },
+
+        { "param": "Formant", "widget": "knob", "polarity": "bipolar" },
+        { "param": "Output", "widget": "fader" },
+        { "param": "Width", "widget": "knob" },
+        { "param": "High Cut", "widget": "knob" }
+      ] }
+  ]
+}

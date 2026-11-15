@@ -1,0 +1,17 @@
+{
+  "name": "Voice Morph",
+  "manufacturer": "Germanikkus",
+  "version": "1.2.0",
+  "format": "vst2",
+  "kind": "effect",
+  "uid": "GCg8",
+  "numInputs": 2,
+  "numOutputs": 2,
+  "category": "Effect",
+  "file32": "VST/voice-morph-arm32.so",
+  "file64": "VST/voice-morph-arm64.so",
+  "description": "Voice pitch effect: Natural and Hard Tune correction, Robot, Chipmunk, Monster, Harmony, Warble and Underwater styles locked to a key and scale, with tempo-synced echo, stutter, width and EQ.",
+  "author": "Germanikkus",
+  "url": "",
+  "license": "MIT"
+}
