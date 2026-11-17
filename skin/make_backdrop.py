@@ -3,7 +3,7 @@
 The four panels sit behind the 4 x 4 control grid that tools/gen_ui.py lays out, one panel
 per Q-Link column: VOICE, TUNE, FX, EQ. Needs Pillow (pip install pillow).
 
-    python "plugins/Voice Morph/skin/make_backdrop.py"
+    python skin/make_backdrop.py   (from the project folder)
 """
 import math
 import os

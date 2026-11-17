@@ -68,14 +68,18 @@ A YIN pitch detector runs on a decimated copy of the input every ~5.8 ms (voices
 
 ## Build
 
+This project lives on its own (`~/Germanikkus/voice-morph`) and is built with the MPC Plugin Builder SDK, checked out next to it at `~/Germanikkus/mpc-plugin-builder-sdk`. Run these from this folder:
+
 The page uses a backdrop image, which the SDK's ui.json generator cannot add, so the skin is built by a script into `skins/`:
 
 ```
-python tools/build.py "plugins/Voice Morph"                  # once, makes build/params.json
-python "plugins/Voice Morph/skin/make_backdrop.py"           # only if you change the backdrop (needs Pillow)
-python "plugins/Voice Morph/skin/make_skin.py"               # after changing ui.json or the backdrop
-python tools/build.py "plugins/Voice Morph"
-python tools/package.py "plugins/Voice Morph"
+SDK=../mpc-plugin-builder-sdk
+python $SDK/tools/build.py .                  # once, makes build/params.json
+python skin/make_backdrop.py                  # only if you change the backdrop (needs Pillow)
+python skin/make_skin.py                      # after changing ui.json or the backdrop
+python $SDK/tools/build.py .
+$SDK/.sdk-tools/host_sim build/native/voice-morph.dylib test --wav build/test.wav
+python $SDK/tools/package.py .
 ```
 
 Licence: MIT. All DSP written for this plugin (YIN after de Cheveigné & Kawahara 2002; PSOLA after Moulines & Charpentier 1990).

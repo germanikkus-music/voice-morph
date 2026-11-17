@@ -4,8 +4,8 @@ option, so this runs it and then sets the image on every tab.
 
 Run after changing ui.json or the backdrop, after one normal build (it needs build/params.json):
 
-    python "plugins/Voice Morph/skin/make_skin.py"
-    python tools/build.py "plugins/Voice Morph"
+    python skin/make_skin.py   (from the project folder)
+    python ../mpc-plugin-builder-sdk/tools/build.py .
 
 build.py then copies skins/ verbatim instead of generating the UI.
 """
@@ -18,7 +18,8 @@ import tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJECT = os.path.dirname(HERE)
-SDK = os.path.dirname(os.path.dirname(PROJECT))
+# The SDK is checked out next to this project; MPC_SDK overrides that.
+SDK = os.environ.get("MPC_SDK") or os.path.join(os.path.dirname(PROJECT), "mpc-plugin-builder-sdk")
 
 
 def main():
